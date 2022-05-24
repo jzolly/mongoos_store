@@ -22,7 +22,24 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use(express.urlencoded({ extended: true }));
 
 // ROUTES
+// Seed (delete later)
+const productSeed = require('./models/productSeed')
+
+app.get('/products/seed', (req, res) => {
+	Product.deleteMany({}, (error, allProducts) => {});
+
+	Product.create(productSeed, (error, data) => {
+		res.redirect('/products');
+	})
+});
 // I
+app.get('/products', (req, res) => {
+	Product.find({}, (error, allProducts) => {
+		res.render('index.ejs', {
+			products: allProducts,
+		});
+	})
+});
 
 // N
 app.get('/products/new', (req, res) => {
