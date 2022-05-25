@@ -19,6 +19,10 @@
                 <img class="productImg" src="<%= product.img; %>" alt="<%= product._id; %>" height="200" width="200px"/> <br />
                 <a href="/products/<%= product._id; %> "><%=product.name; %></a>
                 <span class="price">        $<%= product.price %> </span>
+                <form action='/products/<%= product._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
+					<input type="submit" value="DELETE" />
+				</form>
+                <a href="/products/<%=product._id %>/edit">Edit</a>
             </p>
             
 			<% }) %>

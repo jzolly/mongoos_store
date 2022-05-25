@@ -37,8 +37,8 @@ header {
 }
 .plantsDisplay {
     width:100%;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     border-radius: 10px;
     box-shadow:1px 1px 10px #ddd,
                 -1px -1px 10px #ddd,
