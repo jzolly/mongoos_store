@@ -3,15 +3,61 @@
     --light-green:#81a28a;
     --green-foam:#a7babc;
     --cactus-green:#4f6856;
-    --pale-grey:#ddd9d4;
-    --medium-grey:#a7a39e;
+    --pale-grey:#e9e2da;
+    --medium-grey:#9e9b98;
     --deep-green:#354b45;
-    --sorbet-pink:#a65b75;
+    --sorbet-pink:#a47c8a;
     --mulch-brown:#9b8262;
 }
 body {
     background-color: var(--pale-grey);
+    font-family: Helvetica;
 }
 header {
-    background-image: url();
+    background-color: var(--cactus-green);
+    width: 100%;
+    height: 200px;
+}
+.container {
+    box-shadow: 2px 2px var(--medium-grey);
+
+}
+#btnNew {
+    font-size: 15px;
+    background: rgb(236, 236, 222);
+    margin: 2px;
+    border: 1px;
+    box-shadow: 2px 2px var(--medium-grey);
+    transition: 0.3s ease-in-out;
+}
+#btnNew:hover {
+    cursor: pointer;
+    background:var(--sorbet-pink);
+    box-shadow: 2px 2px var(--medium-grey);
+}
+.plantsDisplay {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow:1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
+}
+.productDisplay {
+    background-color: white;
+    width: 250px;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 3px 3px var(--medium-grey);
+
+}
+.productImg {
+    border-radius: 5px;
+}
+.price {
+    text-align: right;
 }

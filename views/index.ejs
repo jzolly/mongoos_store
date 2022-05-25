@@ -7,22 +7,22 @@
 	<body>
         <header>
             <div class="container">
-
+                <img id="banner" src="https://document-export.canva.com/_-URo/DAFBqm_-URo/42/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20220524%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220524T071653Z&X-Amz-Expires=81724&X-Amz-Signature=e9e6694edf518ea79b23cff5eef866bdab90ed4dc0d9242eb3ce4cdee76514d6&X-Amz-SignedHeaders=host&response-expires=Wed%2C%2025%20May%202022%2005%3A58%3A57%20GMT" alt="logo" height="200px">
             </div>
         </header>
         <div class="topnav">
-            <h1>Tiny Garden's Succulents</h1>
         </div>
-        <a href="/products/new">Add a New Product</a>
-        <ul>
+        <a href="/products/new"><button id="btnNew">Add a New Plant</button></a>
+        <div class="plantsDisplay">
 			<% products.forEach(product => { %>
-			<li>
-                <img src="<%= product.img; %>" alt="<%= product._id; %>" height="200"/> <br />
+			<p class="productDisplay">
+                <img class="productImg" src="<%= product.img; %>" alt="<%= product._id; %>" height="200" width="200px"/> <br />
                 <a href="/products/<%= product._id; %> "><%=product.name; %></a>
-            </li>
+                <span class="price">        $<%= product.price %> </span>
+            </p>
+            
 			<% }) %>
-		</ul>
-       <nav>
-       </nav>
+
+        </div>
 	</body>
 </html>
