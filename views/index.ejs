@@ -8,16 +8,16 @@
 	</head>
 	<body>
 		<h1>Mongoose Store Products</h1>
+        <a href="/products/new">Add a New Product</a>
         <ul>
 			<% products.forEach(product => { %>
 			<li>
                 <a href="/products/<%= product._id; %> "><%=product.name; %></a>
-               <img src="<%= product.img; %>" alt="<%= product._id; %>" /> 
+               <img src="<%= product.img; %>" alt="<%= product._id; %>" height="200"/> 
             </li>
 			<% }) %>
 		</ul>
        <nav>
-           <a href="/products/new">Add a New Product</a>
        </nav>
 	</body>
 </html>

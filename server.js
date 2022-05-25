@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // ROUTES
 // Seed (delete later)
-const productSeed = require('./models/productSeed')
+const productSeed = require('./models/productSeed');
 
 app.get('/products/seed', (req, res) => {
 	Product.deleteMany({}, (error, allProducts) => {});
@@ -43,18 +43,25 @@ app.get('/products', (req, res) => {
 
 // N
 app.get('/products/new', (req, res) => {
-	res.send('new');
+	res.render('new.ejs');
 })
 // D
 // U
 // Create
 app.post('/products', (req, res) => {
     Product.create(req.body, (error, createdProduct) => {
-		res.send(createdProduct);
-	})
-})
+		res.redirect('/products');
+	});
+});
 // E
-// S
+// Show
+app.get('/products/:id', (req, res) => {
+	Product.findById(req.params.id, (err, foundProduct) => {
+		res.render('show.ejs', {
+			product: foundProduct,
+		});
+	});
+});
 
 // Listeners
 const PORT = process.env.PORT;
