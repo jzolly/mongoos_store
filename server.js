@@ -20,6 +20,8 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // MIDDLEWARE
 app.use(express.urlencoded({ extended: true }));
+// connect CSS
+app.use(express.static('public'));
 
 // ROUTES
 // Seed (delete later)

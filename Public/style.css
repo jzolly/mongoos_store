@@ -1,0 +1,17 @@
+/* VARIABLES */
+:root {
+    --light-green:#81a28a;
+    --green-foam:#a7babc;
+    --cactus-green:#4f6856;
+    --pale-grey:#ddd9d4;
+    --medium-grey:#a7a39e;
+    --deep-green:#354b45;
+    --sorbet-pink:#a65b75;
+    --mulch-brown:#9b8262;
+}
+body {
+    background-color: var(--pale-grey);
+}
+header {
+    background-image: url();
+}
