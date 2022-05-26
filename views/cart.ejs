@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Cart</title>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <a href="/products">Back to Product Index</a>
+    <table style="border: solid 1px black;">
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th></th>
+            <th>Total</th>
+        </tr>
+        <tr >
+            <td>data</td> <!-- this tr will house the data from our userCart db -->
+            <td>2</td>
+            <td>$3</td>
+            <td>
+                <form>
+                    <input type="submit" value="remove item">
+                </form>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Cart Total</td>
+            <td></td> <!-- this cell will pull data from the function that will total the cart-->
+        </tr>
+    </table>
+    <form>
+        <!-- This button needs to reroute to checkout page with a form but no function -->
+        <input type="submit" value="Purchase">
+    </form>
+</body>
+</html>

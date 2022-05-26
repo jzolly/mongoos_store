@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<nav>
-			<a href="/products">Back to Books Index</a>
+			<a href="/products">Back to Product Index</a>
 		</nav>
 		<h1><%=product.name %></h1>
         <img src="<%= product.img %> " alt="<%= product.name %> " height="200px"/> <br />
@@ -20,7 +20,9 @@
         <br />
         Quantity: <%= product.qty %> 
         <br />
+		<% if(product.qty === 0) { %>
+			<p style="color:red">Out of Stock</p>
+			<% } %>
         <a href="/products/<%=product._id%>/edit"><button>Edit</button></a>
-        <button>Add to Cart</button>
 	</body>
 </html>
