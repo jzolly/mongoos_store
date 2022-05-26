@@ -14,9 +14,10 @@
         <div class="topnav">
         </div>
         <a href="/products/new"><button id="btnNew">Add a New Plant</button></a>
-        <div class="plantsDisplay">
+        <div>
 			<% products.forEach(product => { %>
-			<p class="productDisplay">
+            <div class="productDisplay">
+			<p>
                 <img class="productImg" src="<%= product.img; %>" alt="<%= product._id; %>" height="200" width="200px"/> <br />
                 <a href="/products/<%= product._id; %> "><%=product.name; %></a>
                 <span class="price">        $<%= product.price %> </span>
@@ -29,11 +30,11 @@
                     <% if(product.qty > 0) { %>
                         <input type="submit" value="Add to Cart">
                     <% } else { %>
-                        <p style="color:red; display:inline;">Out of Stock</p>
+                        <p style="color:red; display:inline">Out of Stock</p>
                     <% } %>
                 </form>
             </p>
-            
+        </div>
 			<% }) %>
 
         </div>

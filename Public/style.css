@@ -36,27 +36,31 @@ header {
     box-shadow: 2px 2px var(--medium-grey);
 }
 .plantsDisplay {
-    width:100%;
-    /* display: flex;
-    flex-wrap: wrap; */
+    /* width:100%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 10px;
+    box-shadow: 3px 3px var(--medium-grey);
     box-shadow:1px 1px 10px #ddd,
-                -1px -1px 10px #ddd,
-                1px -1px 10px #ddd,
-                -1px 1px 10px #ddd;
+    -1px -1px 10px #ddd,
+    1px -1px 10px #ddd,
+    -1px 1px 10px #ddd;  */
 }
 .productDisplay {
+    display: block;
     background-color: white;
     width: 250px;
     margin: 5px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    text-align: left;
+    text-align: center;
     box-shadow: 3px 3px var(--medium-grey);
 
 }
 .productImg {
     border-radius: 5px;
+    text-align: center;
 }
 .price {
     text-align: right;
