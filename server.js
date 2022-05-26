@@ -20,8 +20,8 @@ app.use(express.static('public'));
 // Routes/ Controllers
 const productController = require('./controllers/products');
 app.use('/products', productController);
-const cartController = require('./controllers/products');
-app.use('cart', cartController);
+const cartController = require('./controllers/carts');
+app.use('/cart', cartController);
 
 
 // DB CONNECTIONS Error/Success

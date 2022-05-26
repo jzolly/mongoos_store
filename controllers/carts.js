@@ -17,7 +17,7 @@ cartRouter.post('/', (req, res) => {
 			new: true,  //allows us to receive a new version of the document
 		},
 		(error, updatedProduct) => {
-			console.error(error);
+			// console.error(error);
 			res.redirect(`/products/${productId}`) //shows you how to redirect to where you are working.
 		}
 	)

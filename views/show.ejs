@@ -20,9 +20,14 @@
         <br />
         Quantity: <%= product.qty %> 
         <br />
-		<% if(product.qty === 0) { %>
-			<p style="color:red">Out of Stock</p>
+		<form action="/cart?_method=POST" method="POST" style="display:inline;">
+			<input type="text" name="productId" value="<%= product._id %>" hidden>
+			<% if(product.qty > 0) { %>
+				<input type="submit" value="Add to Cart">
+			<% } else { %>
+				<p style="color:red; display:inline;">Out of Stock</p>
 			<% } %>
+		</form>
         <a href="/products/<%=product._id%>/edit"><button>Edit</button></a>
 	</body>
 </html>
